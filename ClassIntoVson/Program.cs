@@ -6,6 +6,8 @@ namespace ClassIntoVson
     {
         static void Main(string[] args)
         {
+
+
             Kurs kurs1 = new Kurs();
             kurs1.KursAdi = "C#";
             kurs1.Egitmen = "Erkan ERGEN";
