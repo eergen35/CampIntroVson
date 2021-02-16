@@ -14,7 +14,7 @@ namespace OOP3
 
         public void Hesapla()
         {
-            Console.WriteLine("Ihtiyac Kredisi Ödeme Planı Hesaplandı" );
+            Console.WriteLine("Ihtiyac Kredisi Ödeme Planı Hesaplandı" ); //artık kendine göre istediği hesaplamayı yapabilirsin. 
         }
     }
 }
