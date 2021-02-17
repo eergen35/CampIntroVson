@@ -4,6 +4,8 @@ using System.Collections.Generic;
 namespace OOP3
 {
     class Program
+
+        //Metot injection
     {
         static void Main(string[] args)
         {
@@ -19,10 +21,15 @@ namespace OOP3
 
             //Aşağıda başvuru yapıyoruz. 
 
-            BaşvuruManager başvuruManager = new BaşvuruManager();
-            başvuruManager.BaşvuruYap(ıhtiyacKrediManager);
+            IloggerService databaseLoggerService = new DatabaseLoggerService();
+            IloggerService fileLogerService = new FileLoggerService();
 
-            List<IKrediManager> krediler = new List<IKrediManager>() { };
+
+            BaşvuruManager başvuruManager = new BaşvuruManager();
+           başvuruManager.BaşvuruYap (konutKrediManager, databaseLoggerService  );
+
+            List<IKrediManager> krediler = new List <IKrediManager>() { ıhtiyacKrediManager , konutKrediManager  };
+           // başvuruManager.KrediOnBilgilendirmesiYap     (krediler   );
 
 
         }
