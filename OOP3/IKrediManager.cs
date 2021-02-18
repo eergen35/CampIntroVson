@@ -13,8 +13,8 @@ namespace OOP3
         void Hesapla();   //public i sildik . 
         void Birseyleryap();
 
-	
 
-	}
+
+    }
 }
 

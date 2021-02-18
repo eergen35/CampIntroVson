@@ -6,11 +6,18 @@ namespace OOP3
 {
     class BaşvuruManager
     {
-        public void BaşvuruYap(IKrediManager krediManager, IloggerService   loggerService) // IKrediManager bellekte tüm kredilerin referanslarını tuttuğundan istenilen kredi yollanabilir. 
+                                                                    //metod injeciton yaptık aşağıda. ILogger enjekte ettik . 
+        public void BaşvuruYap(IKrediManager krediManager, List <ILoggerService>   loggerServices) // IKrediManager bellekte tüm kredilerin referanslarını tuttuğundan istenilen kredi yollanabilir. 
 
         {
             krediManager.Hesapla();
-            loggerService.Log();
+            //loggerService.Log(); çopul yaptığımızdan for each ile döneceğiz. Tek Log ile değil birden fazla log yap demek. 
+            foreach (var loggerService in loggerServices)
+            {
+                loggerService.Log();
+            }
+
+
         }
 
         public void KrediOnBilgilendirmesiYap(List<IKrediManager> krediler)

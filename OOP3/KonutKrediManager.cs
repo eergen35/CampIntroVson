@@ -14,5 +14,6 @@ namespace OOP3
         public void Hesapla()
         {
             Console.WriteLine("Konut Kredisi Ödeme Planı Hesaplandı"); //artık kendine göre istediği hesaplamayı yapabilirsin. 
+        }
     }
 }
